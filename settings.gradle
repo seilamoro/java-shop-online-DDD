@@ -1,7 +1,7 @@
 //proyecto normal de como se llama
 //el proyecto padre es apps para que solo halla un jar y podamos ejecutar lo que queramos
 //las aplicaciones estan en el proyecto padre y cada uno llamara a los subproyectos
-rootProject.name = 'shop-online-ddd'
+rootProject.name = 'java-shop-online-ddd'
 //subproyectos en formato de boundencontext
 include ':shared'
 project(':shared').projectDir = new File('src/shared')
