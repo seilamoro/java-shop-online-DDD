@@ -15,8 +15,8 @@ class CategoryCreatorShould {
 
         Category category = new Category("some-id","some-name", "some-description");
 
-        creator.create(category.id(),category.name(),category.description());//cambio en el modelado 1
-        //creator.create(new CreateCategoryRequest(category.id(),category.name(),category.description()));//le pasamos el objeto request
+        //creator.create(category.id(),category.name(),category.description());//cambio en el modelado 1
+        creator.create(new CreateCategoryRequest(category.id(),category.name(),category.description()));//le pasamos el objeto request
 
         verify(repository, atLeastOnce()).save(category);
     }

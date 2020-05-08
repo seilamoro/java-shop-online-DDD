@@ -17,13 +17,13 @@ public final class CategoryCreator {
     }
 
 
-        public void create(String id, String name, String description ){
+        /*public void create(String id, String name, String description ){
             Category category = new Category(id, name, description);
             repository.save(category);
-    }//refactorizado en modelado de dominio1
-    //ahora recibe un valid object, no hace falta que el valid object tenga get, los atributos siempre van a ser privados para evitar que fuera del objeto sea mutable, encapsularlo
-   /* public void create(CreateCategoryRequest request){
+    }*///refactorizado en modelado de dominio1
+    //ahora recibe un valid object pojo, no hace falta que el valid object tenga get, los atributos siempre van a ser privados para evitar que fuera del objeto sea mutable, encapsularlo
+    public void create(CreateCategoryRequest request){
         Category category = new Category(request.id(), request.name(), request.description());
         repository.save(category);
-    }*/
+    }
 }
