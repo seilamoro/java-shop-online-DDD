@@ -3,8 +3,7 @@ package s.moro.shop.categories.application.create;
 
 
 import s.moro.shared.domain.Service;
-import s.moro.shop.categories.domain.Category;
-import s.moro.shop.categories.domain.CategoryRepository;
+import s.moro.shop.categories.domain.*;
 
 
 //encapsulamos al punto de entrada del boudencontext que es el modulo
@@ -23,7 +22,8 @@ public final class CategoryCreator {
     }*///refactorizado en modelado de dominio1
     //ahora recibe un valid object pojo, no hace falta que el valid object tenga get, los atributos siempre van a ser privados para evitar que fuera del objeto sea mutable, encapsularlo
     public void create(CreateCategoryRequest request){
-        Category category = new Category(request.id(), request.name(), request.description());
+        //Category category = new Category(request.id(), request.name(), request.description());//refactorizado en modelando dominio 1 1-value-objects-immutabilidad-y-tips-para-agilizar-desarrollo
+        Category category = new Category(new CategoryId(request.id()), new CategoryName(request.name()), new CategoryDescription(request.description()));
         repository.save(category);
     }
 }

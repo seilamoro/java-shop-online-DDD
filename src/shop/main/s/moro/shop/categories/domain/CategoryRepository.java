@@ -6,5 +6,5 @@ import java.util.Optional;
 public interface CategoryRepository {
     void save(Category category);
 
-    Optional<Category> search(String id);
+    Optional<Category> search(CategoryId id);
 }

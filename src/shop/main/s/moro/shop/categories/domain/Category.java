@@ -3,20 +3,36 @@ package s.moro.shop.categories.domain;
 import java.util.Objects;
 
 public final class Category {
+    private final CategoryId id;
+    private final CategoryName name;
+    private final CategoryDescription description;
 
-    private String id;
+    /*private String id;
 
     private String name;
 
-    private String description;
+    private String description;*/
 
-    public Category(String id, String name, String description) {
+    public Category(CategoryId id, CategoryName name, CategoryDescription description) {
+        /*this.id = id;
+        this.name = name;
+        this.description = description;*/
         this.id = id;
         this.name = name;
         this.description = description;
     }
+    public CategoryId id() {
+        return id;
+    }
 
-    public String id() {
+    public CategoryName name() {
+        return name;
+    }
+
+    public CategoryDescription description() {
+        return description;
+    }
+    /*public String id() {
         return id;
     }
 
@@ -45,5 +61,5 @@ public final class Category {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, description);
-    }
+    }*///refactor modelando dominio 1 1-value-objects-immutabilidad-y-tips-para-agilizar-desarrollo
 }
