@@ -44,7 +44,7 @@ allprojects {
         //esto en la version final no esta
         testCompile ('org.junit.jupiter:junit-jupiter-api:5.5.2')
         testCompile ('org.mockito:mockito-core:2.+')
-
+        testCompile ('com.github.javafaker:javafaker:1.0.1')//para el test de mother esto es una libreria para que nos genere
         /*testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
         testImplementation 'org.mockito:mockito-core:2.+'
         testImplementation 'com.github.javafaker:javafaker:1.0.1'*/
